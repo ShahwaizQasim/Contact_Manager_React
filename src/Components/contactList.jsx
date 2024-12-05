@@ -1,10 +1,12 @@
 import React from 'react'
 
-function ContactList() {
-  // console.log('contactData from contactList=>', contactData);
+function ContactList({AddData}) {
+  console.log(AddData, 'from contact list');
   
   return (
-    <div>contactList</div>
+    <div>
+      
+      contactList</div>
   )
 }
 

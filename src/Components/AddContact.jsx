@@ -17,8 +17,7 @@ function AddContact({ AddContact }) {
             return
         }
         AddContact(contactData)
-        // console.log(contactData);
-
+        setContactData({ name: "", email: "" });
     }
 
 
@@ -30,7 +29,7 @@ function AddContact({ AddContact }) {
                     placeholder="Enter Name" name="name" value={contactData.name} onChange={handleChange} />
                 <input type="text" className="w-80 py-1 px-3 border-2 mt-2 m-auto"
                     placeholder="Enter Email" name="email" value={contactData.email} onChange={handleChange} />
-                <button className="h-10 py-2 w-[140px] m-auto mt-5 border-2 border-[#ccc] hover:scale-95 active:bg-black active:text-white"
+                <button className="h-10 py-2 w-[140px] m-auto mt-5 border-2 border-[#ccc] hover:scale-95 active:bg-black active:text-white="
                     onClick={handleAdd}>Add Contact</button>
             </div>
         </>

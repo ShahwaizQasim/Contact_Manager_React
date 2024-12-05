@@ -1,11 +1,20 @@
 import ContactList from "./Components/contactList";
 import Header from "./Components/header";
 import AddContact from "./Components/AddContact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function App() {
-  const [contact, setContact] = useState([]);
+
+  const localStorageKey = "contact";
+  
+  const [contact, setContact] = useState(() => {
+    return JSON.parse(localStorage.getItem(localStorageKey))
+    || []});
+
+  useEffect(() => {
+    localStorage.setItem(localStorageKey, JSON.stringify(contact))
+  }, [contact])
 
   const AddData = (data) => {
     setContact([...contact, { id: Math.random(), data }]);

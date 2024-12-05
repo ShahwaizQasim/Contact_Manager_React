@@ -23,7 +23,7 @@ function AddContact({ AddContact }) {
 
     return (
         <>
-            <div className="flex justify-center flex-col m-auto border-2">
+            <div className="flex justify-center flex-col m-auto">
                 <h2 className="text-center mt-8 text-3xl font-semibold">Add Contact</h2>
                 <input type="text" className="w-80 py-1 px-3 border-2 mt-5 m-auto"
                     placeholder="Enter Name" name="name" value={contactData.name} onChange={handleChange} />

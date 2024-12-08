@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 function App() {
 
   const localStorageKey = "contact";
-  
+
   const [contact, setContact] = useState(() => {
     return JSON.parse(localStorage.getItem(localStorageKey))
-    || []});
+      || []
+  });
 
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(contact))
